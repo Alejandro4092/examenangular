@@ -1,10 +1,13 @@
-export class Empleado{
+export class Cubo{
     constructor(
-        public idEmpleado:number,
-        public apellido:string,
-        public oficio:string,
-        public salario:number,
-        public director:number
+        public idCubo:number,
+        public nombre:string,
+        public modelo:string,
+        public marca:string,
+        public color:string,
+        public imagen:string,
+        public precio:number,
+        public valoracion:number,
         
 ){}
 }

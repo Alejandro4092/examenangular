@@ -1,0 +1,8 @@
+@for(compra of compras;track compra){   
+    <div class="card-body">
+        <h5 class="card-title">Compra ID: {{ compra.idCubo }}</h5>
+        <p class="card-text">Pedido ID: {{ compra.idPedido }}</p>
+        <p class="card-text">Fecha Pedido: {{ compra.fechaPedido }}</p>
+    </div>
+        }
+        <button><a class="nav-link" [routerLink]="['/pedido']" style="color: blue;">pedidos</a></button>

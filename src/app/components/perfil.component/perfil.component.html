@@ -1,0 +1,9 @@
+<div *ngIf="usuario; ">
+  <h2>Perfil del Empleado</h2>
+
+  <p><strong>ID:</strong> {{ usuario.nombre }}</p>
+  <p><strong>Email:</strong> {{ usuario.email }}</p>
+  <!-- añademe un boton para mostrar las compras del usuario -->
+ <button><a class="nav-link" [routerLink]="['/compras']" style="color: blue;">Compras</a></button>
+
+
