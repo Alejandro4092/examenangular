@@ -17,10 +17,8 @@
             Marcas
           </a>
           <ul class="dropdown-menu">
-          
-
-            <li>
-             <a [routerLink]="['/marcas',marcas]" class="btn btn-dark">{{marcas}}</a>
+            <li *ngFor="let marca of marcas">
+             <a [routerLink]="['/marca',marca]" class="btn btn-dark">{{marca}}</a>
             </li>
         
           </ul>

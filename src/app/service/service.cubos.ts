@@ -26,7 +26,7 @@ export class ServiceCubo {
     }
     
      findCubosMarca(marca:string): Observable<Array<Cubo>>{
-    let request="api/cubos/cubosmarca"+marca;
+    let request="api/cubos/cubosmarca/"+marca;
     let url= environment.urlApiCubos+request;
     return this._http.get<Array<Cubo>>(url);
     }
@@ -50,14 +50,14 @@ export class ServiceCubo {
         const headers = new HttpHeaders().set('Authorization', 'Bearer ' + token);
         return this._http.get<Array<Compra>>(url, { headers });
     }
-    realizarCompra(token: string, compra: Compra): Observable<any> {
-        const request = 'api/Compra/insertarpedido'+compra.idCubo;
+    realizarCompra(token: string, cubo: Cubo): Observable<any> {
+        const request = 'api/Compra/insertarpedido'+cubo.idCubo;
         const url = environment.urlApiCubos + request;
         const headers = new HttpHeaders()
             .set('Authorization', 'Bearer ' + token)
             .set('Content-Type', 'application/json');
-        const json = JSON.stringify(compra);
-        return this._http.post(url, json, { headers });
+        const json = JSON.stringify(cubo);
+        return this._http.post(url, null, { headers });
     }
   
 

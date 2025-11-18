@@ -1,1 +1,11 @@
-<p>marca.component works!</p>
+
+<div>
+    <h2>Cubos de la marca seleccionada</h2>
+    <ul>
+        @for (cube of cubos; track $index) {
+        <li>
+            {{cube.nombre}} - {{cube.modelo}} - {{cube.marca}} <img src="{{cube.imagen}}" alt="{{cube.nombre}}" style="width: 100px;">
+        </li>
+    }
+    </ul>
+</div>

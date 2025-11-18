@@ -1,1 +1,10 @@
-<p>pedido.component works!</p>
+<div>
+    <select name="cubos" id="cubos">
+        @for(cubo of cubos;track cubo){
+                    <option value="cubo.idCubo">{{cubo.nombre}} ,{{cubo.modelo}}</option>
+                   
+                }
+
+    </select>
+    <button (click)="comprarCubo()">Comprar cubo</button>
+    </div>
